@@ -1,0 +1,202 @@
+@import "materialize";
+body { 
+  font-family: 'NanumBarunGothic', 'Nanum Gothic', 'Libre Baskerville', 'sans-serif';
+  font-size: 24px;
+}
+
+a:active, a:hover, a:target, a:focus {
+  outline: none;
+}
+
+.border {
+  border: 1px solid #000;
+}
+
+.border-rounded-2 {
+  border-radius: 50px;
+}
+
+.border-rounded {
+  border-radius: 100%;
+}
+
+.font-lb {
+  font-family: 'Libre Baskerville';
+  font-size: 3rem;
+  letter-spacing: 5px;
+  transition: font-size 0.5s;
+  -webkit-transition: font-size 0.5s;
+}
+
+.font-nnmj {
+  font-family: 'NanumMyeongjo';
+}
+
+.font-nnmj,
+.font-nngt {
+  font-size: 2rem !important;
+  transition: font-size 0.5s;
+  -webkit-transition: font-size 0.5s;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.text-middle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: unset;
+  transform: translateY(-50%);
+}
+
+/* Navbar */
+.navbar-fixed {
+  position: absolute;
+  z-index: 998;
+
+  .nav-top-fade-in {
+    animation-name: navTopFadeIn;
+    -webkit-animation-name: navTopFadeIn;
+    animation-duration: 0.15s;
+    -webkit-animation-duration: 0.15s;
+    visibility: visible; 
+    
+    .brand-logo,
+    .hide-on-med-and-down li a,
+    .sidenav-trigger { color: #cbb29b; }
+
+    .dropdown-content {
+      li a { color: #222; }
+    }
+  }
+
+  .nav-top-fade-out {
+    animation-name: navTopFadeOut;
+    -webkit-animation-name: navTopFadeOut;
+    animation-duration: 0.15s;
+    -webkit-animation-duration: 0.15s;
+    visibility: visible; }
+
+  nav {
+    background-color: rgba(23, 23, 23, 0);
+    box-shadow: unset;
+    
+    .dropdown-content {
+      background-color: rgba(255, 255, 255, 0.6);
+
+      li a { color: #222; }
+    }
+
+    .dropdown-content-mobile {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    a { color: #fff; }
+
+    .sidenav { background-color: rgba(23, 23, 23, 1); }
+  }
+}
+
+@keyframes navTopFadeIn {
+  0% { background-color: rgba(23, 23, 23, 0); } 
+  100% { background-color: rgba(23, 23, 23, 0.6); }
+}
+
+@-webkit-keyframes navTopFadeIn {
+  0% { background-color: rgba(23, 23, 23, 0); } 
+  100% { background-color: rgba(23, 23, 23, 0.6); }
+}
+
+@keyframes navTopFadeOut {
+  0% { background-color: rgba(23, 23, 23, 0.6); } 
+  100% { background-color: rgba(23, 23, 23, 0); }
+}
+
+@-webkit-keyframes navTopFadeOut {
+  0% { background-color: rgba(23, 23, 23, 0.6); } 
+  100% { background-color: rgba(23, 23, 23, 0); }
+}
+
+
+nav ul a,
+.brand-logo {
+  color: #444;
+}
+
+p { line-height: 2rem; }
+
+/* Footer */
+.page-footer {
+  background-color: #222222;
+
+  ul.footer-company-info:first-child { margin-bottom: 0; }
+  ul.footer-company-info:last-child { margin-top: 0; }
+  ul.footer-company-addr:first-child { margin-bottom: 0; }
+  ul.footer-company-addr:nth-child(2) { margin-top: 0; margin-bottom: 0; }
+  ul.footer-company-addr:last-child { margin-top:0; }
+
+  ul {
+    li {
+      font-size: 12px;
+      font-style: normal;
+      color: rgb(142, 142, 142);
+      display: inline-block;
+      border-right: 1px solid rgb(142, 142, 142);
+      padding-left: 5px;
+      padding-right: 5px; 
+      line-height: 12px; 
+      letter-spacing: 1px; }
+      
+    li:first-child { padding-left: 0; }
+    
+    li:last-child {
+      border-right: 0;
+      padding-right: 0; }
+    }
+      
+    ul li,
+    .footer-copyright {
+      font-family: 'Libre Baskerville';
+  }
+
+  .footer-copyright {
+    div { color: rgb(102, 102, 102); }
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  #index-banner .section { top: 10%; }
+}
+
+@media screen and (max-width: 960px) {
+  .font-lb {
+    font-size: 2rem;
+    transition: font-size 0.5s;
+    -webkit-transition: font-size 0.5s;
+  }
+
+  .font-nnmj,
+  .font-nngt {
+    font-size: 1rem !important;
+    transition: font-size 0.5s;
+    -webkit-transition: font-size 0.5s;
+  }
+
+  .text-right {
+    text-align: center;
+  }
+
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section { top: 0; }
+}
+
+.icon-block { padding: 0 15px; }
+
+.icon-block .material-icons { font-size: inherit; }
+
+footer.page-footer { margin: 0; }

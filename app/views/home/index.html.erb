@@ -1,0 +1,69 @@
+<% content_for(:side_bar) do %>
+    <%= render 'shared/navbar', :current => "home" %>
+<% end %>
+<% content_for(:footer) do %>
+    <%= render 'shared/footer' %>
+<% end %>
+
+<%= stylesheet_link_tag 'home' %>
+
+<div id="index-banner">
+    <div id="carouselSlider" class="carousel carousel-slider center">
+        <div class="carousel-fixed-item center">
+            <a id="carousel-prev" class="btn left border-rounded border movePrevCarousel"><</a>
+            <a id="carousel-next" class="btn right border-rounded border moveNextCarousel">></a>
+        </div>
+        <div class="carousel-item item-1">
+            <div class="center text-middle white-text">
+                <h1 class="font-lb">PREMIUM SPACE</h1>
+                <h2 class="font-nnmj italic">공간, 그 이상의 가치를 느껴보세요.</h2>
+            </div>
+        </div>
+        <div class="carousel-item item-2">
+            <div class="text-middle black-text center">
+                <div class="container text-right">
+                    <h1 class="font-lb">KINGDOM Studio</h1>
+                    <h2 class="font-nngt">공간을 공유하는 프라이빗 스튜디오</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="index-banner">
+    <div class="row">
+        <div class="col s6 item-1 center">
+            <div class="text-middle text-left">
+                <div class="container">
+                    <h1 class="font-lb italic white-text">GOLF Studio</h1>
+                    <div class="container-divider">
+                        <div class="divider"></div>
+                    </div>
+                    <div class="container white-text font-nnmj">
+                        트랙맨 분석 시스템이 구비되어 있는 프라이빗한 골프 스튜디오
+                    </div> 
+                    <div class="conatiner margin-top-5">
+                        <a href="/" class="btn white black-text border-0 border-rounded-2">지점보기 →</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="col s6 item-1 center">
+            <div class="text-middle text-right">
+                <div class="container">
+                    <h1 class="font-lb italic white-text">P.T Studio</h1>
+                    <div class="container-divider">
+                        <div class="col-s3 divider"></div>
+                    </div>
+                    <div class="container white-text font-nnmj">
+                        럭셔리한 호텔급 시설을 개별적으로 이용하는 프라이빗한 P.T 스튜디오
+                    </div>
+                    <div class="conatiner margin-top-5">
+                        <a href="/" class="btn white black-text border-0 border-rounded-2">지점보기 →</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%= javascript_include_tag 'home' %>
